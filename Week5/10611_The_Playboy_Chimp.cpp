@@ -1,0 +1,56 @@
+#include<bits/stdc++.h>
+#define fastIO() ios_base :: sync_with_stdio(false); cin.tie(NULL);
+#define forI(i, s, n) for(i=s; i<n; i++)
+#define forI_R(i, n, s) for(i=n; i>=s; i--)
+#define forI_list(it, l) for(auto it=l.begin(); it != l.end(); it++)
+#define ll long long 
+#define vi vector<int>
+#define vll vector<long long>
+#define vvi vector<vector<int>>
+#define vvll vector<vector<long long>>
+#define u_mii unordered_map<int,int>
+#define mii map<int,int>
+#define mic map<int,char>
+#define msi map<string,int>
+#define pii pair<int,int>
+#define pq_max priority_queue<int>
+#define pq_min priority_queue<int, vector<int>, greater<int>>
+#define yes cout << "YES\n"
+#define no cout << "NO\n"
+#define nl '\n'
+using namespace std;
+
+int main(){
+    fastIO();
+
+    int n; cin >> n;
+    
+    int i, a[n];
+    forI(i, 0, n){
+        cin >> a[i];
+    }
+
+
+    int first = a[0], last = a[n-1];
+
+    int q; cin >> q;
+    while(q--){
+        int h; cin >> h;
+        
+        if(lower_bound(a, a+n, h) - a == 0){
+            cout << 'X' << " ";
+        }
+        else {
+            cout << *(lower_bound(a, a+n, h)-1) << " ";
+        }
+        if(upper_bound(a, a+n, h) - a == n){
+            cout << 'X' << nl;
+        }
+        else {
+            cout << *upper_bound(a, a+n, h) << nl;
+        }
+    }
+
+
+    return 0;
+}
