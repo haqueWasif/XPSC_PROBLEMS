@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #include<bits/stdc++.h>
 #define forI(i, s, n) for(i=s; i<n; i++)
 
@@ -22,4 +23,30 @@ int main(){
     
 
     return 0;
+=======
+#include<bits/stdc++.h>
+#define forI(i, s, n) for(i=s; i<n; i++)
+
+using namespace std;
+
+
+int main(){
+    int n, x; cin >> n >> x;
+
+    int i, a[n];
+    forI(i, 0, n){
+        cin >> a[i];
+    }
+
+    forI(i, 0, n){
+        if(a[i] == x) continue;
+        cout << a[i] << " ";
+    }
+    cout << endl;
+
+
+    
+
+    return 0;
+>>>>>>> 7ff84f2 (OK)
 }
